@@ -1,0 +1,11 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // 居中对齐每个卡片，根据需求可以调整
+  width: 100%; // 可以调整宽度或者根据父容器适应
+
+  app-generic-card {
+    width: 90%; // 假设卡片宽度占父容器的90%，可根据设计调整
+    margin-bottom: 20px; // 每个卡片之间的间隔
+  }
+}

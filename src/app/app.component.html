@@ -1,21 +1,15 @@
 <mat-toolbar color="primary">
-  <span class="toolbar-content">
-    <button mat-button routerLink="/pain-points" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Pain Points</button>
-    <button mat-button routerLink="/ideas" routerLinkActive="active">Ideas</button>
-    <button mat-button routerLink="/thoughts" routerLinkActive="active">Thoughts</button>
-    <!-- 更多导航链接 -->
-  </span>
-  <span class="user-avatar" style="margin-left: auto;">
-    <img src="path/to/your/avatar.png" alt="User Avatar" width="40" height="40">
-  </span>
+  <span>{{ title }}</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-button routerLink="/pain-points" routerLinkActive="active-link">Pain Points</button>
+  <button mat-button routerLink="/ideas" routerLinkActive="active-link">Ideas</button>
+  <button mat-button routerLink="/thoughts" routerLinkActive="active-link">Thoughts</button>
+  <div class="user-avatar">
+    <img src="assets/user-avatar.png" alt="User Avatar">
+  </div>
 </mat-toolbar>
 
 <div class="main-container">
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-<!--  <aside class="sidebar">-->
-<!--    <app-top-topics></app-top-topics>-->
-<!--    <app-top-pain-points></app-top-pain-points>-->
-<!--  </aside>-->
+  <router-outlet></router-outlet>
+  <!-- Your routed components will be rendered here -->
 </div>

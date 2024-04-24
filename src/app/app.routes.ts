@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PainPointListComponent } from './pain-points/pain-point-list/pain-point-list.component';
-import { IdeaListComponent } from './ideas/idea-list/idea-list.component';
-import { ThoughtListComponent } from './thoughts/thought-list/thought-list.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PainPointsComponent} from './features/pain-points/pain-points.component';
+import { IdeasComponent } from './features/ideas/ideas.component';
+import { ThoughtsComponent } from './features/thoughts/thoughts.component';
 
-export const routes: Routes = [ // add export here
-  { path: '', redirectTo: '/pain-points', pathMatch: 'full' }, // 默认重定向到 Pain Points
-  { path: 'pain-points', component: PainPointListComponent },
-  { path: 'ideas', component: IdeaListComponent },
-  { path: 'thoughts', component: ThoughtListComponent },
-  // 可以根据需要添加更多路由
+export const routes: Routes = [
+  { path: '', redirectTo: '/pain-points', pathMatch: 'full' },
+  { path: 'pain-points', component: PainPointsComponent },
+  { path: 'ideas', component: IdeasComponent },
+  { path: 'thoughts', component: ThoughtsComponent },
+  // 其他路由可以按需继续添加
 ];
 
 @NgModule({
@@ -17,4 +17,3 @@ export const routes: Routes = [ // add export here
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
