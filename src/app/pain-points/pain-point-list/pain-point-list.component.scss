@@ -1,0 +1,10 @@
+.pain-point-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  @media (max-width: 600px) {
+    align-items: stretch;
+  }
+}
